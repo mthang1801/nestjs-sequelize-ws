@@ -1,0 +1,19 @@
+{
+	"collection": "@nestjs/schematics",
+	"sourceRoot": "src",
+	"compilerOptions": {
+		"assets": [
+			{ "include": "../views", "watchAssets": true },
+			{ "include": "i18n/**/*", "watchAssets": true }
+		],
+		"types": ["node"],
+		"plugins": [
+			{
+				"name": "@nestjs/swagger",
+				"options": {
+					"dtoFileNameSuffix": [".dto.ts", ".entity.ts", ".model.ts"]
+				}
+			}
+		]
+	}
+}
